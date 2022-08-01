@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra papel tijera</title>
+    <script>    
+
+        function random()
+        {
+            const max = 3
+            const min = 1
+
+            return Math.floor( Math.random() * (max - min + 1) + min)
+        }
+
+        const bot = random()
+        let  tu = ""
+
+        tu = prompt("1- 🪨🪨 2- 🧻🧻 o 3- ✂️✂️")
+
+        //eleccion de "tu" opcion
+        if(tu == "1" || tu == "piedra" || tu == "roca")
+        {
+            alert("elegiste 🪨🪨")
+            let tu = 1
+        }
+        else if(tu == "2" || tu == "papel")
+        {
+            alert("elegiste 🧻🧻")
+            tu = 2
+        }
+        else if(tu == "3" || tu == "tijera")
+        {
+            alert("elegiste ✂️✂️")
+            tu = 3
+        }
+        else
+        {
+            alert("opcion invalida")
+            tu = 0
+        }
+
+
+        while(tu != 0)
+        {
+            //eleccion bot
+            if(bot == 1)
+            {
+                alert("🤖 eligio 🪨🪨")
+            }
+            else if(bot == 2)
+            {
+                alert("🤖 eligio 🧻🧻")
+            }
+            else if(bot == 3)
+            {
+                alert("🤖 eligio ✂️✂️")
+            }
+
+            //juego
+            if (tu == bot)
+            {
+                alert("Empate")
+            }
+            else if ((tu == 1 && bot == 3) || (tu == 2 && bot == 1) || (tu == 3 && bot == 2))
+            {
+                alert("Ganaste!!🏆🥇")
+            }
+            else{
+                alert("Perdiste😭😭")
+            }
+
+            tu = 0
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
