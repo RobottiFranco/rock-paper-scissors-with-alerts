@@ -44,12 +44,12 @@
             let perdidas = 0
             let empate = 0
             
-            while(ganaste < 3 && perdidas < 3)
+            while((ganaste < 3) && (perdidas < 3))
             {
                 let tu = prompt("1- 🪨🪨 2- 🧻🧻 o 3- ✂️✂️")
                 alert("elegiste " + eleccion(tu))
                 
-                if((tu = 1) || (tu = 2) || (tu = 3))
+                if((tu == 1) || (tu == 2) || (tu == 3))
                 {
                     const bot = random(1,3)
                     alert("🤖 eligio " + eleccion(bot))
@@ -72,7 +72,7 @@
                 }
                 else
                 {
-                    alert("sos un mongolico")
+                    alert("Sos un mongolico")
                 }
             }
 
@@ -88,8 +88,9 @@
             }
             
         }
-
+    
         game()
+    
     </script>
 </head>
 <body>
