@@ -37,14 +37,13 @@
 
         function game()
         {
-            let partidas = 0
 
             let ganaste = 0
             let perdidas = 0
             let empate = 0
             
 
-            while(partidas != 3)
+            while(ganadas > 4 && perdidas > 4)
             {
                 let tu = "" + prompt("1- 🪨🪨 2- 🧻🧻 o 3- ✂️✂️")
                 alert("elegiste " + eleccion(tu))
@@ -68,7 +67,6 @@
                     alert("Perdiste😭😭 Perdiste: " + perdidas)
                 }
 
-                partidas ++
             }
 
             alert("Ganadas: " + ganaste + " Perdiste: " + perdidas + " Empates: " + empate)
